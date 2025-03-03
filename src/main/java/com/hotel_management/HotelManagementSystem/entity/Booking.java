@@ -31,7 +31,7 @@ public class Booking {
     private int numOfChildren;
 
     private int totalNumOfGuest;
-    private String bookingInformationCode;
+    private String bookingConfirmationCode;;
 
     @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name = "user_id")
@@ -64,7 +64,7 @@ public class Booking {
                 ", numOfAdults=" + numOfAdults +
                 ", numOfChildren=" + numOfChildren +
                 ", totalNumOfGuest=" + totalNumOfGuest +
-                ", bookingInformationCode='" + bookingInformationCode + '\'' +
+                ", bookingInformationCode='" + bookingConfirmationCode + '\'' +
                 ", user=" + user +
                 ", room=" + room +
                 '}';
