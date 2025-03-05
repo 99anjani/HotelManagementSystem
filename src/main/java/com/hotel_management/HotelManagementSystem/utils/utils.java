@@ -117,6 +117,8 @@ public class utils {
             bookingDTO.setUser(utils.mapUserEntityToUserDTO(booking.getUser()));
         }
 
+        // Includes all bookings the user has made.
+        // Each booking includes the booked room details.
         if (booking.getUser() != null){
             RoomDTO roomDTO = new RoomDTO();
 
