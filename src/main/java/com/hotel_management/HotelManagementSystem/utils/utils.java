@@ -130,6 +130,16 @@ public class utils {
         return bookingDTO;
     }
 
-    //public static List<UserDTO>
+    public static List<UserDTO> mapUserListEntityToUserListDTO(List<User> userList){
+        return userList.stream().map(utils::mapUserEntityToUserDTO).collect(Collectors.toList());
+    }
+
+    public static List<RoomDTO> mapRoomListEntityToRoomListDTO(List<Room> roomList){
+        return roomList.stream().map(utils::mapRoomEntityToRoomDTO).collect(Collectors.toList());
+    }
+
+    public static List<BookingDTO> mapBooKingListEntityToBookingListDTO(List<Booking> bookingList){
+        return bookingList.stream().map(utils::mapBookingEntityToBookingDTO).collect(Collectors.toList());
+    }
 
 }
