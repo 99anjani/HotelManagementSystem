@@ -1,7 +1,7 @@
 package com.hotel_management.HotelManagementSystem.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,5 @@ public class UserDTO {
     private String phoneNumber;
     private String role;
     private List<BookingDTO> bookings = new ArrayList<>();
-
 
 }

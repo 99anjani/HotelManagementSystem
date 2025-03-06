@@ -95,14 +95,14 @@ public class utils {
         if(!user.getBookings().isEmpty()){
             userDTO.setBookings(user.getBookings()
                     .stream()
-                    .map(booking -> mapBookingEntityToBookingDTOPlusBookingRooms(booking,false))
+                    .map(booking -> mapBookingEntityToBookingDTOPlusBookedRooms(booking,false))
                     .collect(Collectors.toList())
             );
         }
         return userDTO;
     }
 
-    public static BookingDTO mapBookingEntityToBookingDTOPlusBookingRooms(Booking booking,Boolean mapUser){
+    public static BookingDTO mapBookingEntityToBookingDTOPlusBookedRooms(Booking booking,Boolean mapUser){
         BookingDTO bookingDTO = new BookingDTO();
 
         bookingDTO.setId(booking.getId());

@@ -54,7 +54,7 @@ public class SecurityConfig {
         daoAuthenticationProvider.setUserDetailsService(customUserDetailsService);//Loads user details (username, password, roles)
         daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         return daoAuthenticationProvider;
-        
+
     }
 
     @Bean
