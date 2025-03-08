@@ -23,6 +23,12 @@ public class UserController {
 
     }
 
+    @GetMapping("/get-by-id/{userId}")
+    public ResponseEntity<Response> getUserById(@PathVariable("userId") String userId) {
+        Response response = userService.getUserById(userId);
+        return ResponseEntity.status(response.getStatusCode()).body(response);
+    }
+
     @DeleteMapping("/delete/{userId}")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> deleteUser(@PathVariable("userId") String userId){
